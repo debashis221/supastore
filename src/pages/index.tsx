@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 const Home: NextPage = () => {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
   const [scrolling, setScrolling] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,17 +16,8 @@ const Home: NextPage = () => {
         setScrolling(false);
       }
     };
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
-    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
