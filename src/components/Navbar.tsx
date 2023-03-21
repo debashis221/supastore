@@ -3,11 +3,12 @@ import Image from "next/image";
 import { useState } from "react";
 
 const Navbar: NextPage<{ scrolling: boolean }> = ({ scrolling }) => {
+  console.log(scrolling)
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <header>
       <nav
-        className={`relative flex justify-between border-2 border-black bg-white ${
+        className={`relative flex justify-between border-t-2 border-b-2 border-black bg-white ${
           scrolling ? "sticky top-0 z-50" : ""
         }`}
       >
@@ -25,7 +26,7 @@ const Navbar: NextPage<{ scrolling: boolean }> = ({ scrolling }) => {
         <ul
           className={`${
             isOpen ? "absolute" : "hidden"
-          } top-20 w-full list-none items-center gap-4 bg-white p-5 text-3xl uppercase md:static md:flex md:text-xl lg:static lg:flex lg:text-2xl xl:static xl:flex xl:text-3xl`}
+          } top-20 w-full font-black list-none items-center gap-4 bg-white p-5 text-3xl uppercase md:static md:flex md:text-xl lg:static lg:flex lg:text-2xl xl:static xl:flex xl:text-3xl`}
         >
           <li>About</li>
           <li>Men</li>
@@ -34,10 +35,10 @@ const Navbar: NextPage<{ scrolling: boolean }> = ({ scrolling }) => {
           <li>Contact</li>
         </ul>
         <div className="hidden md:flex lg:flex xl:flex">
-          <button className="border-l-2 border-black p-5 uppercase hover:bg-[#ff90e8] md:text-xl lg:text-2xl xl:text-3xl">
+          <button className="font-black border-l-2 border-black p-5 uppercase hover:bg-[#ff90e8] md:text-xl lg:text-2xl xl:text-3xl">
             Login
           </button>
-          <button className="border-l-2 border-black bg-black p-5 uppercase text-white hover:bg-[#ff90e8] hover:text-black md:text-xl lg:text-2xl xl:text-3xl">
+          <button className="font-black border-l-2 border-black bg-black p-5 uppercase text-white hover:bg-[#ff90e8] hover:text-black md:text-xl lg:text-2xl xl:text-3xl">
             Cart(0)
           </button>
         </div>

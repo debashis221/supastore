@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 main {
-  @apply bg-gray-200;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
   smooth-scroll-behavior: auto;
+  overflow-x: hidden
 }
 ::-webkit-scrollbar {
   width: 0.5rem;
@@ -20,4 +24,3 @@ main {
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
-

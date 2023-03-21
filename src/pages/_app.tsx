@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import { api } from "@/utils/api";
 
 import "@/styles/globals.css";
-const myFont = localFont({ src: "./assets/fonts/MabryPro-Black.woff2" });
+const myFont = localFont({ src: "./assets/fonts/MabryPro-Regular.woff2" });
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
