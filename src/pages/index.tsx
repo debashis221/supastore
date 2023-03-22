@@ -3,7 +3,7 @@ import Image from "next/image";
 // import { api } from "@/utils/api";
 import { Navbar } from "@/components";
 import { useState, useEffect } from "react";
-import { Banner } from "@/sections";
+import { Banner, TextSection } from "@/sections";
 
 const Home: NextPage = () => {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -17,10 +17,8 @@ const Home: NextPage = () => {
         setScrolling(false);
       }
     };
-    // window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -36,6 +34,7 @@ const Home: NextPage = () => {
       />
       <Navbar scrolling={scrolling} />
       <Banner />
+      <TextSection />
     </>
   );
 };

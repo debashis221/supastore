@@ -1,3 +1,4 @@
 import Banner from "./banner";
+import TextSection from "./TextSection";
 
-export { Banner };
+export { Banner, TextSection };
