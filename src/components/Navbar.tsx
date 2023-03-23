@@ -1,9 +1,8 @@
 import { type NextPage } from "next";
 import Image from "next/image";
-import { useState } from "react";
+import { useState,memo } from "react";
 
 const Navbar: NextPage<{ scrolling: boolean }> = ({ scrolling }) => {
-  console.log(scrolling);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <header
@@ -25,7 +24,7 @@ const Navbar: NextPage<{ scrolling: boolean }> = ({ scrolling }) => {
       <ul
         className={`${
           isOpen ? "absolute" : "hidden"
-        } top-20 w-full list-none items-center gap-4 bg-white p-5 text-3xl font-black uppercase md:static md:flex md:text-xl lg:static lg:flex lg:text-2xl xl:static xl:flex xl:text-3xl`}
+        } top-20 z-50 w-full list-none items-center gap-4 bg-white p-5 text-3xl font-black uppercase md:static md:flex md:text-xl lg:static lg:flex lg:text-2xl xl:static xl:flex xl:text-3xl`}
       >
         <li>About</li>
         <li>Men</li>
@@ -89,4 +88,4 @@ const Navbar: NextPage<{ scrolling: boolean }> = ({ scrolling }) => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);
