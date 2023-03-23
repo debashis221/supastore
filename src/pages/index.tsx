@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         alt="logo"
         width={100}
         height={100}
-        className={`h-50 hidden w-20 object-cover p-6 md:min-w-full lg:min-w-full xl:min-w-[100vw] ${
+        className={`h-50 hidden w-20 object-cover p-6 md:min-w-full lg:min-w-full ${
           scrolling ? "hidden" : "md:block lg:block xl:block"
         }`}
       />
