@@ -1,4 +1,4 @@
-import Banner from "./banner";
-import TextSection from "./TextSection";
+import Banner from "./Banner";
+import Products from "./Products";
 
-export { Banner, TextSection };
+export {Banner, Products};
