@@ -9,7 +9,7 @@ const Banner: NextPage = () => {
         <div className="border-b-2 border-black bg-yellow lg:border-r-2 lg:border-b-0">
           <div className="relative h-full min-h-[22rem] items-center p-[6.5vw]">
             <div className="mx-0 grid w-full max-w-[48rem] grid-cols-1 grid-rows-1 place-items-start content-start gap-y-12 gap-x-0">
-              <h1 className="my-0 text-[5rem] font-normal leading-tight tracking-tight">
+              <h1 className="my-0 text-[5rem] leading-tight tracking-tight uppercase font-black">
                 Go from
                 <span className="block whitespace-normal">zero to $1</span>
               </h1>
@@ -25,7 +25,7 @@ const Banner: NextPage = () => {
         <div className="bg-pink">
           <div className="relative flex h-full min-h-[22rem] items-center p-[6.5vw]">
             <div className="mx-0 grid w-full max-w-[48rem] grid-cols-1 grid-rows-1 place-items-start content-start gap-x-0 gap-y-12">
-              <h1 className="my-0 text-[5rem] font-normal leading-tight tracking-tight">
+              <h1 className="my-0 text-[5rem] leading-tight tracking-tight uppercase font-black">
                 Go from
                 <span className="block whitespace-normal">zero to $1</span>
               </h1>

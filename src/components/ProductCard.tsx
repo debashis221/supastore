@@ -5,7 +5,7 @@ import Image from "next/image";
 const ProductCard: NextPage<{ productData: ProductProps }> = (productData) => {
     return (
         <article
-            className={"relative grid text-black border-2 border-primary rounded-[0.25rem] bg-secondary text-start"}>
+            className={"relative grid text-black border-2 border-primary rounded-[0.25rem] bg-secondary text-start hover:shadow-[0.25rem_0.25rem_0_0_#000]"}>
 
             <div className={"border-b-2 border-primary pb-[100%] relative"}>
                 <Image
