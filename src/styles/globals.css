@@ -8,8 +8,6 @@
 }
 
 body {
-    min-height: available;
-    min-width: available;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
