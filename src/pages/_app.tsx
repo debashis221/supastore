@@ -3,9 +3,10 @@ import {type Session} from "next-auth";
 import {SessionProvider} from "next-auth/react";
 import localFont from "next/font/local";
 import {api} from "@/utils/api";
-import {wrapper} from "@/store/store";
 
 import "@/styles/globals.css";
+import {Provider} from "react-redux";
+import {store} from "@/store/store";
 
 const myFont = localFont({src: "./assets/fonts/MabryPro-Regular.woff2"});
 
@@ -16,10 +17,11 @@ const MyApp: AppType<{ session: Session | null }> = ({
     return (
         <SessionProvider session={session}>
             <main className={myFont.className}>
-                <Component {...pageProps} />
+                <Provider store={store}> <Component {...pageProps} /></Provider>
+
             </main>
         </SessionProvider>
     );
 };
 
-export default wrapper.withRedux(api.withTRPC(MyApp));
+export default api.withTRPC(MyApp);

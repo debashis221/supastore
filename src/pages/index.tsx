@@ -4,12 +4,13 @@ import Image from "next/image";
 import {Navbar} from "@/components";
 import {useState, useEffect} from "react";
 import {Banner, Products} from "@/sections";
-import {useAppSelector} from "@/store/hooks";
+import {useSelector} from "react-redux";
+import type {RootState} from "@/store/store";
 
 const Home: NextPage = () => {
     // const hello = api.example.hello.useQuery({ text: "from tRPC" });
     const [scrolling, setScrolling] = useState<boolean>(false);
-    const counter = useAppSelector((state) => state.counter);
+    const counter = useSelector((state: RootState) => state.counter);
 
     useEffect(() => {
         const handleScroll = () => {

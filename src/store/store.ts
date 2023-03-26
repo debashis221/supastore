@@ -1,18 +1,13 @@
-import {configureStore} from '@reduxjs/toolkit';
-import {createWrapper} from 'next-redux-wrapper';
-import counterReducer from '@/store/features/counterSlice';
+import {configureStore} from '@reduxjs/toolkit'
+import counterReducer from './features/counterSlice'
 
+export const store = configureStore({
+    reducer: {
+        counter: counterReducer,
+    },
+})
 
-export const makeStore = () =>
-    configureStore({
-        reducer: {
-            counter: counterReducer,
-        },
-    })
-
-type Store = ReturnType<typeof makeStore>;
-
-export type AppDispatch = Store['dispatch'];
-export type RootState = ReturnType<Store['getState']>;
-
-export const wrapper = createWrapper(makeStore, {debug: true});
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof store.getState>
+// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
+export type AppDispatch = typeof store.dispatch

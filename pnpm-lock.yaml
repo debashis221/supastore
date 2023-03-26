@@ -29,6 +29,7 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   react-redux: ^8.0.5
+  redux: ^4.2.1
   superjson: 1.9.1
   tailwindcss: ^3.2.0
   typescript: ^4.9.5
@@ -48,7 +49,8 @@ dependencies:
   next-redux-wrapper: 8.1.0_tkvsu76c7rlbwbwuszet747gf4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-redux: 8.0.5_3xleytyzprlgycb2ded54tx72i
+  react-redux: 8.0.5_ctrls2ti7t7iutxbwkm5ipogyy
+  redux: 4.2.1
   superjson: 1.9.1
   zod: 3.21.4
 
@@ -344,7 +346,7 @@ packages:
     dependencies:
       immer: 9.0.21
       react: 18.2.0
-      react-redux: 8.0.5_3xleytyzprlgycb2ded54tx72i
+      react-redux: 8.0.5_ctrls2ti7t7iutxbwkm5ipogyy
       redux: 4.2.1
       redux-thunk: 2.4.2_redux@4.2.1
       reselect: 4.1.7
@@ -2058,7 +2060,7 @@ packages:
     dependencies:
       next: 13.2.4_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
-      react-redux: 8.0.5_3xleytyzprlgycb2ded54tx72i
+      react-redux: 8.0.5_ctrls2ti7t7iutxbwkm5ipogyy
     dev: false
 
   /next/13.2.4_biqbaboplfbrettd7655fr4n2y:
@@ -2510,7 +2512,7 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: false
 
-  /react-redux/8.0.5_3xleytyzprlgycb2ded54tx72i:
+  /react-redux/8.0.5_ctrls2ti7t7iutxbwkm5ipogyy:
     resolution: {integrity: sha512-Q2f6fCKxPFpkXt1qNRZdEDLlScsDWyrgSj0mliK59qU6W5gvBiKkdMEG2lJzhd1rCctf0hb6EtePPLZ2e0m1uw==}
     peerDependencies:
       '@types/react': ^16.8 || ^17.0 || ^18.0
@@ -2540,6 +2542,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-is: 18.2.0
+      redux: 4.2.1
       use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 

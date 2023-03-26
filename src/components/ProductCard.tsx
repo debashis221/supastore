@@ -1,11 +1,11 @@
 import React from 'react';
 import {type NextPage} from "next";
 import Image from "next/image";
-import {useAppDispatch} from "@/store/hooks";
 import {increment} from "@/store/features/counterSlice";
+import {useDispatch} from "react-redux";
 
 const ProductCard: NextPage<{ productData: ProductProps }> = (productData) => {
-    const dispatch = useAppDispatch()
+    const dispatch = useDispatch()
     return (
         <article
             className={"relative grid text-black border-2 border-primary rounded-[0.25rem] bg-secondary text-start hover:shadow-[0.25rem_0.25rem_0_0_#000]"}>
@@ -34,7 +34,8 @@ const ProductCard: NextPage<{ productData: ProductProps }> = (productData) => {
                 </div>
                 <div className={"p-5"}>
                     <div
-                        className={"price cursor-pointer"} onClick={() => dispatch(increment())}>${productData.productData.price}</div>
+                        className={"price cursor-pointer"}
+                        onClick={() => dispatch(increment())}>${productData.productData.price}</div>
                 </div>
 
             </footer>
