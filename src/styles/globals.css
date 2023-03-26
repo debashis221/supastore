@@ -7,10 +7,6 @@
     text-rendering: optimizeLegibility;
 }
 
-html {
-    @apply bg-black
-}
-
 body {
     min-height: available;
     min-width: available;
