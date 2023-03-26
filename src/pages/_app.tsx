@@ -10,10 +10,7 @@ import {store} from "@/store/store";
 
 const myFont = localFont({src: "./assets/fonts/MabryPro-Regular.woff2"});
 
-const MyApp: AppType<{ session: Session | null }> = ({
-                                                         Component,
-                                                         pageProps: {session, ...pageProps},
-                                                     }) => {
+const MyApp: AppType<{ session: Session | null }> = ({Component, pageProps: {session, ...pageProps},}) => {
     return (
         <SessionProvider session={session}>
             <Head>

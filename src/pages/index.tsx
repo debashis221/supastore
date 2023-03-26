@@ -6,6 +6,7 @@ import {useState, useEffect} from "react";
 import {Banner, Products} from "@/sections";
 import {useSelector} from "react-redux";
 import type {RootState} from "@/store/store";
+import Features from "@/sections/Features";
 
 const Home: NextPage = () => {
     // const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -33,11 +34,12 @@ const Home: NextPage = () => {
                 className={`h-50 hidden w-20 object-cover p-6 md:min-w-full lg:min-w-full ${
                     scrolling ? "hidden" : "md:block lg:block xl:block"
                 }`}
-            />);
+            />
             <Navbar scrolling={scrolling}/>
             <Banner/>
             <Products/>
-            {counter.value}
+            <Features/>
+
         </>
     );
 };
