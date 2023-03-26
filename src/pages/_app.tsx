@@ -17,7 +17,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
     return (
         <SessionProvider session={session}>
             <Head>
-                <meta name="viewport" content="viewport-fit=cover"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1 viewport-fit=cover"/>
                 <title>Supastore - Buy your needs in one place</title>
             </Head>
             <main className={myFont.className}>
