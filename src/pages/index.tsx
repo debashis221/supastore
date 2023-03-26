@@ -4,10 +4,12 @@ import Image from "next/image";
 import {Navbar} from "@/components";
 import {useState, useEffect} from "react";
 import {Banner, Products} from "@/sections";
+import {useAppSelector} from "@/store/hooks";
 
 const Home: NextPage = () => {
     // const hello = api.example.hello.useQuery({ text: "from tRPC" });
     const [scrolling, setScrolling] = useState<boolean>(false);
+    const counter = useAppSelector((state) => state.counter);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,7 +22,6 @@ const Home: NextPage = () => {
         window.addEventListener("scroll", handleScroll, {passive: true});
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
     return (
         <>
             <Image
@@ -31,10 +32,11 @@ const Home: NextPage = () => {
                 className={`h-50 hidden w-20 object-cover p-6 md:min-w-full lg:min-w-full ${
                     scrolling ? "hidden" : "md:block lg:block xl:block"
                 }`}
-            />
+            />);
             <Navbar scrolling={scrolling}/>
             <Banner/>
             <Products/>
+            {counter.value}
         </>
     );
 };
