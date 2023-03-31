@@ -8,7 +8,7 @@ const Products: NextPage = () => {
         <section className="px-5 lg:px-16 py-[5.5rem] relative items-center text-center">
             <h1 className="text-[2.125rem] tracking-tight leading-10 font-black">
                 SOPASTORE makes clothes to elevate everyday life through lighthearted
-                escapism. While styles vary by season, <span
+                escapism. While styles vary by season,<span
                 className={"hover:bg-pink border-2 border-primary rounded-full px-5 text-center hover:shadow-[0.25rem_0.25rem_0_0_#000]"}>all collections</span> are
                 guided by the ineffable sense of freedom that comes with travel.
             </h1>
