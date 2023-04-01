@@ -1,7 +1,6 @@
-import {type NextPage} from "next";
-import {useState} from "react";
+import {type FC, useState} from "react";
 
-const Chips: NextPage<{ data: CategoryProps[] }> = (data) => {
+const Chips: FC<{ data: CategoryProps[] }> = (data) => {
     const [selectedCat, setSelectedCat] = useState(0);
     return (
         <div className={"grid grid-flow-col p-5 gap-4 z-2 overflow-auto"}>

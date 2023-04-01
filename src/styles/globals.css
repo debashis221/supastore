@@ -25,11 +25,18 @@ body {
 
 ::-webkit-scrollbar-track {
     background: transparent;
+    border: 2px solid #000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #000;
     border-radius: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff90e8;
+    border-radius: 0.2rem;
+    border: 2px solid #000;
 }
 
 a {
@@ -87,4 +94,66 @@ a:hover:after {
     border-width: calc(.5rem + .5em);
     border-right: solid transparent 1rem;
     border-left: none
+}
+
+.inline-newsletter-grid {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    -ms-grid-columns: 1fr 5rem;
+    grid-template-columns: 1fr 5rem;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+}
+
+.footer-newsletter {
+    height: 4.5rem;
+    padding: 1rem 1.5rem;
+    border-style: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.form-input {
+    width: 100%;
+    margin-bottom: 0;
+    border-width: 1px;
+    border-color: #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #252a2e;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.form-input:focus {
+    outline: 0;
+}
+
+.form-submit-btn.arrow {
+    padding: 0.1rem 0.5rem 0.5rem;
+    border-left: 2px solid #000;
+    background-color: #ff90e8;
+    -webkit-transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+    transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+    color: #000;
+    font-size: 1.75vw;
+}
+
+.form-submit-btn {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.w-button {
+    display: inline-block;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0;
 }

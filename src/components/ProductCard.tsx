@@ -1,11 +1,10 @@
-import React from 'react';
-import {type NextPage} from "next";
+import React, {type FC} from 'react';
 import Image from "next/image";
 import {increment} from "@/store/features/counterSlice";
 import {useDispatch} from "react-redux";
 import type {AppDispatch} from "@/store/store";
 
-const ProductCard: NextPage<{ productData: ProductProps }> = (productData) => {
+const ProductCard: FC<{ productData: ProductProps }> = (productData) => {
     const dispatch: AppDispatch = useDispatch()
     return (
         <article

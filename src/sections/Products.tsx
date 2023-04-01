@@ -1,9 +1,9 @@
-import {type NextPage} from "next";
 import {Chips, ProductCard} from "@/components";
 import {data, products} from "@/data/data";
 import ShadowButton from "@/components/ShadowButton";
+import type {FC} from "react";
 
-const Products: NextPage = () => {
+const Products: FC = () => {
     return (
         <section className="px-5 lg:px-16 py-[5.5rem] relative items-center text-center">
             <h1 className="text-[2.125rem] tracking-tight leading-10 font-black">

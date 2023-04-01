@@ -1,13 +1,12 @@
-import {type NextPage} from "next";
 import Image from "next/image";
-import {useState, memo} from "react";
+import {type FC, memo, useState} from "react";
 import Link from "next/link";
 
 type MenuTypes = {
     name: string;
     link: string;
 }
-const Navbar: NextPage<{ scrolling: boolean }> = ({scrolling}) => {
+const Header: FC<{ scrolling: boolean }> = ({scrolling}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const menuItems: MenuTypes[] = [
         {name: "About", link: ""},
@@ -109,4 +108,4 @@ const Navbar: NextPage<{ scrolling: boolean }> = ({scrolling}) => {
     );
 };
 
-export default memo(Navbar);
+export default memo(Header);

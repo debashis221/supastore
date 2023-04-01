@@ -1,9 +1,8 @@
 import {type NextPage} from "next";
 import Image from "next/image";
 // import { api } from "@/utils/api";
-import {Navbar} from "@/components";
-import {useState, useEffect} from "react";
-import {Banner, Products} from "@/sections";
+import {useEffect, useState} from "react";
+import {Banner, ContactUs, Footer, Header, Products} from "@/sections";
 import {useSelector} from "react-redux";
 import type {RootState} from "@/store/store";
 import Features from "@/sections/Features";
@@ -35,10 +34,12 @@ const Home: NextPage = () => {
                     scrolling ? "hidden" : "md:block lg:block xl:block"
                 }`}
             />
-            <Navbar scrolling={scrolling}/>
+            <Header scrolling={scrolling}/>
             <Banner/>
             <Products/>
             <Features/>
+            <ContactUs/>
+            <Footer/>
 
         </>
     );

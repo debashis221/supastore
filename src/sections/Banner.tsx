@@ -1,8 +1,7 @@
-import {type NextPage} from "next";
-
 import {ShadowButton} from "@/components";
+import type {FC} from "react";
 
-const Banner: NextPage = () => {
+const Banner: FC = () => {
     return (
         <section className="grid grid-cols-1 border-b-2 border-black lg:grid-cols-2 xl:grid-cols-2">
             <div className="border-b-2 border-black bg-pink lg:border-r-2 lg:border-b-0">
