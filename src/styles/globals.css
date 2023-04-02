@@ -38,13 +38,22 @@ body {
     border-radius: 0.2rem;
     border: 2px solid #000;
 }
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: transparent;
+}
 
-a {
+::selection {
+    color: black;
+    background: transparent;
+}
+
+.menuItems {
     padding: 10px 0;
     position: relative;
 }
 
-a:after {
+.menuItems:after {
     bottom: 0;
     content: "";
     display: block;
@@ -56,7 +65,7 @@ a:after {
     width: 0;
 }
 
-a:hover:after {
+.menuItems:hover:after {
     width: 100%;
     left: 0;
 }
@@ -123,7 +132,8 @@ a:hover:after {
     margin-bottom: 0;
     border-width: 1px;
     border-color: #ddd;
-    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     background-color: #fff;
     color: #252a2e;
     font-size: 1.1rem;
@@ -155,5 +165,4 @@ a:hover:after {
     line-height: inherit;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 0;
 }

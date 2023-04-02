@@ -3,14 +3,11 @@ import Image from "next/image";
 // import { api } from "@/utils/api";
 import {useEffect, useState} from "react";
 import {Banner, ContactUs, Footer, Header, Products} from "@/sections";
-import {useSelector} from "react-redux";
-import type {RootState} from "@/store/store";
 import Features from "@/sections/Features";
 
 const Home: NextPage = () => {
     // const hello = api.example.hello.useQuery({ text: "from tRPC" });
     const [scrolling, setScrolling] = useState<boolean>(false);
-    const counter = useSelector((state: RootState) => state.counter);
 
     useEffect(() => {
         const handleScroll = () => {

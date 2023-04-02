@@ -15,7 +15,7 @@ const config = {
      * @see https://github.com/vercel/next.js/issues/41980
      */
     images: {
-        domains: ["images.unsplash.com","cdn3d.iconscout.com"],
+        domains: ["images.unsplash.com", "cdn3d.iconscout.com", "assets.gumroad.com"],
     },
     i18n: {
         locales: ["en"],

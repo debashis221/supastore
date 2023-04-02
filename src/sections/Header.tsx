@@ -1,6 +1,8 @@
 import Image from "next/image";
 import {type FC, memo, useState} from "react";
 import Link from "next/link";
+import {useSelector} from "react-redux";
+import type {RootState} from "@/store/store";
 
 type MenuTypes = {
     name: string;
@@ -8,6 +10,8 @@ type MenuTypes = {
 }
 const Header: FC<{ scrolling: boolean }> = ({scrolling}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const counter = useSelector((state: RootState) => state.counter);
     const menuItems: MenuTypes[] = [
         {name: "About", link: ""},
         {name: "Men", link: ""},
@@ -38,26 +42,33 @@ const Header: FC<{ scrolling: boolean }> = ({scrolling}) => {
                 } top-20 z-50 w-full list-none items-center gap-4 bg-white p-5 text-3xl font-black uppercase md:static md:flex md:text-xl lg:static lg:flex lg:text-2xl xl:static xl:flex xl:text-3xl`}
             >
                 {menuItems.map((item, index) => (
-                    <li key={index} className={"py-3 lg:py-0 md:py-0"}><Link href={item.link}>{item.name}</Link></li>))}
+                    <li key={index} className={"py-3 lg:py-0 md:py-0"}>
+                        <Link href={item.link}
+                              className={"menuItems"}>{item.name}</Link>
+                    </li>))}
                 <div className="flex py-3 justify-between md:hidden lg:hidden">
-                    <button
-                        className="border-2 border-black px-7 py-5 font-black uppercase hover:bg-[#ff90e8] md:text-xl lg:text-2xl xl:text-3xl">
+                    <Link
+                        className="border-2 border-black px-7 py-5 font-black uppercase hover:bg-[#ff90e8] md:text-xl lg:text-2xl xl:text-3xl"
+                        href={"/login"}
+                    >
                         Login
-                    </button>
+                    </Link>
                     <button
                         className="border-l-2 border-black bg-black px-5 py-5 font-black uppercase text-white hover:bg-[#ff90e8] hover:text-black md:text-xl lg:text-2xl xl:text-3xl">
-                        Cart(0)
+                        Cart(`{counter.value}`)
                     </button>
                 </div>
             </ul>
             <div className="hidden md:flex lg:flex xl:flex">
-                <button
-                    className="border-l-2 border-black p-5 font-black uppercase hover:bg-[#ff90e8] md:text-xl lg:text-2xl xl:text-3xl">
+                <Link
+                    className="border-l-2 border-black p-5 font-black uppercase hover:bg-[#ff90e8] md:text-xl lg:text-2xl xl:text-3xl"
+                    href={"/login"}
+                >
                     Login
-                </button>
+                </Link>
                 <button
                     className="border-l-2 border-black bg-black p-5 font-black uppercase text-white hover:bg-[#ff90e8] hover:text-black md:text-xl lg:text-2xl xl:text-3xl">
-                    Cart(0)
+                    Cart({counter.value})
                 </button>
             </div>
             {/* mobile menu icon */}
@@ -104,6 +115,7 @@ const Header: FC<{ scrolling: boolean }> = ({scrolling}) => {
                     </button>
                 )}
             </div>
+
         </header>
     );
 };
